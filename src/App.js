@@ -9,6 +9,8 @@ function App() {
 
     const [awayScore, setAwayScore] = useState(0);
 
+    const [quarter, setQuarter] = useState(0);
+
     const clickHandler = (event) => {
         switch (event.target.getAttribute('class')) {
             case 'homeButtons__touchdown':
@@ -22,6 +24,9 @@ function App() {
                 break;
             case 'awayButtons__fieldGoal':
                 setAwayScore(awayScore + 3);
+                break;
+            case 'quarterButton':
+                setQuarter(quarter + 1);
                 break;
             default:
                 break;
@@ -42,7 +47,7 @@ function App() {
                         <div className="away__score">{awayScore}</div>
                     </div>
                 </div>
-                <BottomRow/>
+                <BottomRow quarter={quarter}/>
             </section>
             <Buttons clickHandler={clickHandler}/>
         </div>

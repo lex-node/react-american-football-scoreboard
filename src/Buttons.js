@@ -11,6 +11,17 @@ const Buttons = (props) => {
                 <button className="awayButtons__touchdown" onClick={props.clickHandler}>Away Touchdown</button>
                 <button className="awayButtons__fieldGoal" onClick={props.clickHandler}>Away Field Goal</button>
             </div>
+            <div className="quarterButtonContainer" style={{display: "flex"}}>
+                <button className="quarterButton" onClick={props.clickHandler} style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: '10%',
+                    maxHeight: '87%'
+                }}>Quarter
+                </button>
+            </div>
         </section>
     )
 }
