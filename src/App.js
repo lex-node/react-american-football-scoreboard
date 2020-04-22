@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import BottomRow from "./BottomRow";
 import "./App.css";
+import Buttons from './Buttons';
 
 function App() {
 
@@ -43,16 +44,7 @@ function App() {
                 </div>
                 <BottomRow/>
             </section>
-            <section className="buttons">
-                <div className="homeButtons">
-                    <button className="homeButtons__touchdown" onClick={clickHandler}>Home Touchdown</button>
-                    <button className="homeButtons__fieldGoal" onClick={clickHandler}>Home Field Goal</button>
-                </div>
-                <div className="awayButtons">
-                    <button className="awayButtons__touchdown" onClick={clickHandler}>Away Touchdown</button>
-                    <button className="awayButtons__fieldGoal" onClick={clickHandler}>Away Field Goal</button>
-                </div>
-            </section>
+            <Buttons clickHandler={clickHandler}/>
         </div>
     );
 }
